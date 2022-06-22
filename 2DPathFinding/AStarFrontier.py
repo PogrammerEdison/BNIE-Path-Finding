@@ -61,6 +61,10 @@ def aStarSearch(grid, start, goal):
         currentLocation = currentNode.location
         exploreNodes.add(currentLocation)
         neighbourNodeLocations = []
+        neighbourNodeLocations.append((currentLocation[0] + 1, currentLocation[1] + 1))#upright neighbour
+        neighbourNodeLocations.append((currentLocation[0] - 1, currentLocation[1] + 1))#downright neighbour
+        neighbourNodeLocations.append((currentLocation[0] + 1, currentLocation[1] - 1))#upleft neighbour
+        neighbourNodeLocations.append((currentLocation[0] - 1, currentLocation[1] - 1))#downleft neighbour
         neighbourNodeLocations.append((currentLocation[0] + 1, currentLocation[1]))#up neighbour
         neighbourNodeLocations.append((currentLocation[0] - 1, currentLocation[1]))#down neighbour
         neighbourNodeLocations.append((currentLocation[0], currentLocation[1] + 1))#right neighbour
