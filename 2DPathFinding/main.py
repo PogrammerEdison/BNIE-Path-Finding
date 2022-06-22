@@ -33,7 +33,7 @@ if __name__ == '__main__':
                 xCoords = random.randint(0, 9)
                 yCoords = random.randint(0, 9)
         obstacles.append([xCoords, yCoords])
-    print(obstacles)
+    print("Generated obstacles: " + str(obstacles))
     gridVar = grid(obstacles)
     finalNode = aStarSearch(gridVar, (0,0), (9,9))
     if finalNode is None:

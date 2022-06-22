@@ -57,7 +57,6 @@ def aStarSearch(grid, start, goal):
     currentNode = frontier.pop()
     exploreNodes = set()
 
-    print(currentNode)
     while not currentNode.location == goal:
         currentLocation = currentNode.location
         exploreNodes.add(currentLocation)
